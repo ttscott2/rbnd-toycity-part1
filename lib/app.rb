@@ -3,8 +3,8 @@ path = File.join(File.dirname(__FILE__), '../data/products.json')
 file = File.read(path)
 products_hash = JSON.parse(file)
 
-puts " "
-puts " "
+puts
+puts
 # Print today's date
 today = Time.now
 puts today.strftime('%B %d, %Y')
@@ -18,7 +18,7 @@ puts "| .__/|_|  \\___/ \\__,_|\\__,_|\\___|\\__|___/"
 puts "| |                                       "
 puts "|_|                                       "
 
-puts " "
+puts
 # For each product in the data set:
   # Print the name of the toy
 	# Print the retail price of the toy
@@ -47,7 +47,7 @@ puts " "
 		avg_discount = retail_price.to_f - avg_sale_price
 		# %02.2f formats float to look like USD
 		puts "Average Discount: $#{format('%02.2f', avg_discount)}"
-		puts " "
+		puts
 	end
 
 
@@ -87,5 +87,5 @@ puts " "
 			purchase_count.each {|brand| purchase_price += brand["price"].to_f}
 			puts "Total revenue for #{brand}: $#{format('%02.2f', purchase_price)}"
 
-			puts " "
+			puts 
 	end
